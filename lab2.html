@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Vue.js Lesson Info</title>
+  <!-- Include Vue.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+</head>
+
+<body>
+  <div id="app">
+    <lesson-info></lesson-info>
+  </div>
+
+  <script>
+    Vue.component('lesson-info', {
+      data: function () {
+        return {
+          subject: 'Psychology',
+          location: 'In-person',
+          price: '$500',
+          image: 'images/lesson.png',
+          altText: 'Lesson Image',
+        };
+      },
+      template: `
+        <div>
+          <h1>Lesson Information</h1>
+          <div>
+            <strong>Subject:</strong> {{ subject }}
+          </div>
+          <div>
+            <strong>Location:</strong> {{ location }}
+          </div>
+          <div>
+            <strong>Price:</strong> {{ price }}
+          </div>
+          <div>
+            <img :src="image" :alt="altText" width="100" height="100" />
+          </div>
+        </div>
+      `,
+    });
+
+    new Vue({
+      el: '#app',
+    });
+  </script>
+</body>
+
+</html>

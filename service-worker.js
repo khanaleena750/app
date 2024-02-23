@@ -12,7 +12,9 @@ var cacheFiles = [
     's9.png',
     's10.png',
     's11.png',
-    's12.png'
+    's12.png',
+    'icon-store-512.png',
+    'lesson.png'
 ];
 
 self.addEventListener('install', (e) => {
